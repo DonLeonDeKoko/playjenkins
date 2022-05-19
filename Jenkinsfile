@@ -16,6 +16,7 @@ pipeline {
             sh '''
             /kaniko/executor --dockerfile `pwd`/Dockerfile \
                              --context `pwd` \
+                             --kaniko-dir /tmp \
                              --no-push
             '''
           }
