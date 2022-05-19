@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: kaniko
 spec:
+  nodeSelector:
+    beta.kubernetes.io/os: linux
   containers:
   - name: kubectl
     image: joshendriks/alpine-k8s
